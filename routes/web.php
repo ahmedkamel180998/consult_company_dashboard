@@ -23,6 +23,7 @@ Route::name('frontend.')->group(function () {
 
 Route::name('admin.')->prefix('admin')->group(function () {
     Route::view('/', 'admin.index')->name('index');
+    Route::view('/login', 'admin.auth.login')->name('login');
 });
 
 Route::get('/dashboard', function () {
