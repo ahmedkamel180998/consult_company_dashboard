@@ -22,8 +22,10 @@ Route::name('frontend.')->group(function () {
 });
 
 Route::name('admin.')->prefix('admin')->group(function () {
-    Route::view('/', 'admin.index')->name('index');
-    Route::view('/login', 'admin.auth.login')->name('login');
+    Route::middleware('auth')->group(function () {
+        Route::view('/', 'admin.index')->name('index');
+    });
+    require __DIR__.'/auth.php';
 });
 
 Route::get('/dashboard', function () {
@@ -36,4 +38,3 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
