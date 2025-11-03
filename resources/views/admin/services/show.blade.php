@@ -23,7 +23,7 @@
                                     <label for="icon">{{ __('keywords.icon') }}</label>
                                     <p class="form-control">
                                         {{ $service->icon }}
-                                        <i class="{{ $service->icon }}"/>
+                                        <i class="{{ $service->icon }} fa-2x"></i>
                                     </p>
                                 </div>
                             </div>

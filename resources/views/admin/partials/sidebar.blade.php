@@ -18,23 +18,13 @@
             </a>
         </div>
         <div class="navbar-nav flex-fill w-100 mb-2">
-            <li class="nav-item">
-                <a href="{{ route('admin.index') }}" class="nav-link">
-                    <i class="fe fe-home fe-16"></i>
-                    <span class="ml-3 item-text">Dashboard</span>
-                </a>
-            </li>
+            <x-sidebar-tab href="{{ route('admin.index') }}" icon="fe-home" name="Dashboard"/>
         </div>
         <p class="text-muted nav-heading mt-4 mb-1">
             <span>Components</span>
         </p>
         <ul class="navbar-nav flex-fill w-100 mb-2">
-            <li class="nav-item dropdown">
-                <a href="{{ route('admin.services.index') }}" class="nav-link">
-                    <i class="fe fe-box fe-16"></i>
-                    <span class="ml-3 item-text">Services</span>
-                </a>
-            </li>
+            <x-sidebar-tab href="{{ route('admin.services.index') }}" icon="fe-box" name="Services"/>
         </ul>
     </nav>
 </aside>

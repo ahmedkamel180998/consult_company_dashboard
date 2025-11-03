@@ -5,19 +5,13 @@
 @section('content')
     <div class="container-fluid">
         <div class="row justify-content-center">
-            @if(session('success'))
-                <div class="col-12 alert alert-success">
-                    {{ session('success') }}
-                </div>
-            @endif
+            <x-success/>
             <div class="col-12">
                 <div class="page-title-box d-sm-flex align-items-center justify-content-between mb-3">
                     <h2 class="h5 page-title">{{ __('keywords.services') }}</h2>
 
                     <div class="page-title-right">
-                        <a href="{{ route('admin.services.create') }}" class="btn btn-sm btn-primary">
-                            {{ __('keywords.add_new') }}
-                        </a>
+                        <x-action-button type="add" href="{{ route('admin.services.create') }}"/>
                     </div>
                 </div>
                 <div class="row">
@@ -44,31 +38,19 @@
                                                     <i class="{{ $service->icon }} fa-2x"></i>
                                                 </td>
                                                 <td>
-                                                    <a href="{{ route('admin.services.edit', $service) }}"
-                                                       class="btn btn-sm btn-success">
-                                                        <i class="fe fe-edit fa-2x"></i>
-                                                    </a>
-                                                    <a href="{{ route('admin.services.show', $service) }}"
-                                                       class="btn btn-sm btn-primary">
-                                                        <i class="fe fe-eye fa-2x"></i>
-                                                    </a>
-                                                    <form action="{{ route('admin.services.destroy', $service) }}"
-                                                          method="post"
-                                                          class="d-inline-block form_delete_service">
-                                                        @csrf
-                                                        @method('DELETE')
-                                                        <button type="submit" class="btn btn-sm btn-danger"
-                                                                onclick="confirmDelete()">
-                                                            <i class="fe fe-trash-2 fa-2x"></i>
-                                                        </button>
-                                                    </form>
+                                                    <x-action-button type="edit"
+                                                                     href="{{ route('admin.services.edit', $service) }}"/>
+                                                    <x-action-button type="show"
+                                                                     href="{{ route('admin.services.show', $service) }}"/>
+                                                    <x-delete-button
+                                                            href="{{ route('admin.services.destroy', $service) }}"
+                                                            id="{{ $service->id }}"/>
                                                 </td>
                                             </tr>
                                         @endforeach
                                     @else
                                         <tr>
-                                            <td colspan="4"
-                                                class="text-center alert alert-danger">{{ __('keywords.no_services') }}</td>
+                                            <x-alert/>
                                         </tr>
                                     @endif
                                     </tbody>
@@ -81,11 +63,4 @@
             </div>
         </div>
     </div>
-    <script>
-        function confirmDelete() {
-            if (confirm("Are you sure you want to delete this service?")) {
-                document.querySelector('.form_delete_service').submit();
-            }
-        }
-    </script>
 @endsection

@@ -23,9 +23,7 @@
                                         <input type="text" name="title" id="title" class="form-control"
                                                placeholder="{{ __('keywords.title') }}" value="{{ $service->title }}">
                                     </div>
-                                    @error('title')
-                                    <div class="text-danger">{{ $message }}</div>
-                                    @enderror
+                                    <x-input-error :messages="$errors->get('title')" class="mt-2"/>
                                 </div>
 
                                 {{-- Icon --}}
@@ -35,9 +33,7 @@
                                         <input type="text" name="icon" id="icon" class="form-control"
                                                placeholder="{{ __('keywords.icon') }}" value="{{ $service->icon }}">
                                     </div>
-                                    @error('icon')
-                                    <div class="text-danger">{{ $message }}</div>
-                                    @enderror
+                                    <x-input-error :messages="$errors->get('icon')" class="mt-2"/>
                                 </div>
 
                                 {{-- Description --}}
@@ -47,14 +43,10 @@
                                         <textarea name="description" id="description" rows="4" class="form-control"
                                                   placeholder="{{ __('keywords.description') }}">{{ $service->description }}</textarea>
                                     </div>
-                                    @error('description')
-                                    <div class="text-danger">{{ $message }}</div>
-                                    @enderror
+                                    <x-input-error :messages="$errors->get('description')" class="mt-2"/>
                                 </div>
                             </div>
-                            <div class="mb-3 d-flex justify-content-end">
-                                <button type="submit" class="btn btn-primary">{{ __('keywords.add_service') }}</button>
-                            </div>
+                            <x-submit-button field="{{__('keywords.edit_service')}}"/>
                         </form>
                     </div>
                 </div>

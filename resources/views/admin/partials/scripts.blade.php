@@ -237,3 +237,10 @@
     gtag('js', new Date());
     gtag('config', 'UA-56159088-1');
 </script>
+<script>
+    function confirmDelete(id) {
+        if (confirm("Are you sure you want to delete this service?")) {
+            document.querySelector(`.delete_service_${id}`).submit();
+        }
+    }
+</script>
