@@ -21,7 +21,9 @@ Route::name('frontend.')->group(function () {
     Route::view('/contact', 'frontend.contact')->name('contact');
 });
 
-Route::name('admin.')->prefix('admin')->group(function () {
+Route::name('admin.')->prefix(LaravelLocalization::setLocale().'/admin')->middleware([
+    'localeSessionRedirect', 'localizationRedirect', 'localeViewPath'
+])->group(function () {
     Route::middleware('auth')->group(function () {
         Route::view('/', 'admin.index')->name('index');
     });
