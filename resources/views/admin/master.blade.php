@@ -1,9 +1,13 @@
-<!doctype html>
+@php
+    $rtlClass = LaravelLocalization::getCurrentLocale() == 'ar' ? ' rtl' : '';
+@endphp
+
+        <!doctype html>
 <html lang="en">
 
 @include('admin.partials.head')
 
-<body class="vertical  light">
+<body class="vertical  light{{$rtlClass}}">
 <div class="wrapper">
     @include('admin.partials.navbar')
 

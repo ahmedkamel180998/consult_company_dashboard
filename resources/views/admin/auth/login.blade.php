@@ -8,6 +8,7 @@
             <form method="POST" action="{{route('admin.login.store')}}"
                   class="col-lg-3 col-md-4 col-10 mx-auto text-center">
                 @csrf
+                @include('admin.partials.language')
                 <a class="navbar-brand mx-auto mt-2 flex-fill text-center" href="{{route('admin.index')}}">
                     <svg version="1.1" id="logo" class="navbar-brand-img brand-md" xmlns="http://www.w3.org/2000/svg"
                          x="0px" y="0px" viewBox="0 0 120 120"
@@ -19,28 +20,28 @@
               </g>
             </svg>
                 </a>
-                <h1 class="h6 mb-3">Sign in</h1>
+                <h1 class="h6 mb-3">{{ __('keywords.sign_in') }}</h1>
                 <!-- Email Address -->
                 <div class="form-group">
-                    <label for="inputEmail" class="sr-only">Email address</label>
-                    <input type="email" id="inputEmail" class="form-control form-control-lg" placeholder="Email address"
-                           required="" autofocus="" autocomplete="username" name="email" :value="old('email')">
+                    <label for="inputEmail" class="sr-only">{{ __('keywords.email_address') }}</label>
+                    <input type="email" id="inputEmail" class="form-control form-control-lg"
+                           placeholder="{{ __('keywords.email_address') }}"
+                           autofocus="" autocomplete="username" name="email" :value="old('email')">
                     <x-input-error :messages="$errors->get('email')" class="mt-2"/>
                 </div>
                 <!-- Password -->
                 <div class="form-group">
-                    <label for="inputPassword" class="sr-only">Password</label>
+                    <label for="inputPassword" class="sr-only">{{ __('keywords.password') }}</label>
                     <input type="password" id="inputPassword" class="form-control form-control-lg"
-                           placeholder="Password"
-                           required="" name="password" autocomplete="current-password">
+                           placeholder="{{ __('keywords.password') }}"
+                           name="password" autocomplete="current-password">
                     <x-input-error :messages="$errors->get('password')" class="mt-2"/>
                 </div>
                 <div class="checkbox mb-3">
                     <label>
-                        <input type="checkbox" value="remember-me"> Stay logged in </label>
+                        <input type="checkbox" value="remember-me"> {{ __('keywords.stay_logged_in') }} </label>
                 </div>
-                <button class="btn btn-lg btn-primary btn-block" type="submit">Let me in</button>
-                <p class="mt-5 mb-3 text-muted">© 2020</p>
+                <button class="btn btn-lg btn-primary btn-block" type="submit">{{ __('keywords.let_me_in') }}</button>
             </form>
         </div>
     </div>

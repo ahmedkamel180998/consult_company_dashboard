@@ -1,9 +1,12 @@
-<!doctype html>
+@php
+    $rtlClass = LaravelLocalization::getCurrentLocale() == 'ar' ? ' rtl' : '';
+@endphp
+        <!doctype html>
 <html lang="en">
 
 @include('admin.auth.partials.head')
 
-<body class="light ">
+<body class="light{{ $rtlClass }}">
 
 @yield('content')
 
