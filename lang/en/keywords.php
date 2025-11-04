@@ -55,4 +55,18 @@ return [
     'subscribers' => 'Subscribers',
     'no_subscribers' => 'No Subscribers',
     'subscriber_deleted_successfully' => 'Subscriber deleted successfully',
+
+    // Testimonial
+    'testimonials' => 'Testimonials',
+    'position' => 'Position',
+    'add_testimonial' => 'Add Testimonial',
+    'add_new_testimonial' => 'Add New Testimonial',
+    'no_testimonials' => 'No Testimonial',
+    'testimonial_deleted_successfully' => 'Testimonial deleted successfully',
+    'show_testimonial' => 'Show Testimonial',
+    'edit_testimonial' => 'Edit Testimonial',
+    'testimonial_created_successfully' => 'Testimonial created successfully',
+    'testimonial_updated_successfully' => 'Testimonial updated successfully',
+    'testimonial' => 'Testimonial',
+    'image' => 'Testimonial Image',
 ];

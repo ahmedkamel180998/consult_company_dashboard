@@ -5,6 +5,7 @@ use App\Http\Controllers\MessageController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\SubscriberController;
+use App\Http\Controllers\TestimonialsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -52,6 +53,8 @@ Route::name('admin.')->prefix(LaravelLocalization::setLocale().'/admin')
                 Route::delete('subscribers/{subscriber}', 'destroy')->name('subscribers.destroy');
             });
 
+            // Testimonial
+            Route::resource('testimonials', TestimonialsController::class);
         });
         require __DIR__.'/auth.php';
     });
