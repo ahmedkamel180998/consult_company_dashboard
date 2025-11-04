@@ -4,6 +4,7 @@ use App\Http\Controllers\FeatureController;
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\SettingController;
 use App\Http\Controllers\SubscriberController;
 use App\Http\Controllers\TestimonialsController;
 use Illuminate\Support\Facades\Route;
@@ -55,6 +56,12 @@ Route::name('admin.')->prefix(LaravelLocalization::setLocale().'/admin')
 
             // Testimonial
             Route::resource('testimonials', TestimonialsController::class);
+
+            // Settings
+            Route::controller(SettingController::class)->group(function () {
+                Route::get('settings', 'index')->name('settings.index');
+                Route::put('settings', 'update')->name('settings.update');
+            });
         });
         require __DIR__.'/auth.php';
     });

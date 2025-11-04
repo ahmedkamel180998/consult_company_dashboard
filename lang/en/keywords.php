@@ -69,4 +69,20 @@ return [
     'testimonial_updated_successfully' => 'Testimonial updated successfully',
     'testimonial' => 'Testimonial',
     'image' => 'Testimonial Image',
+
+    // Settings
+    'settings' => 'Settings',
+    'settings_updated_successfully' => 'Settings updated successfully',
+    'edit_setting' => 'Edit Setting',
+    'general' => 'General',
+    'phone' => 'Phone',
+    'facebook' => 'Facebook',
+    'twitter' => 'Twitter',
+    'instagram' => 'Instagram',
+    'youtube' => 'Youtube',
+    'linkedin' => 'Linkedin',
+    'address' => 'Address',
+    'social_media' => 'Social Media',
+    'contact_info' => 'Contact Info',
+    'contact_info_updated_successfully' => 'Contact info updated successfully',
 ];

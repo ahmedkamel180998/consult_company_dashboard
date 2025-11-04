@@ -29,6 +29,7 @@
             <x-sidebar-tab href="{{ route('admin.messages.index') }}" icon="fe-message-square" name="Messages"/>
             <x-sidebar-tab href="{{ route('admin.subscribers.index') }}" icon="fe-users" name="Subscribers"/>
             <x-sidebar-tab href="{{ route('admin.testimonials.index') }}" icon="fe-rss" name="Testimonials"/>
+            <x-sidebar-tab href="{{ route('admin.settings.index') }}" icon="fe-settings" name="Settings"/>
         </ul>
     </nav>
 </aside>
