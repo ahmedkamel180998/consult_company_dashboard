@@ -29,7 +29,7 @@ class {{ class }} extends Model
     protected const UPLOAD_PATH = 'images/';
 
     /**
-     * fields that will handle upload document
+     * fields that will handle an upload document
      */
     protected const UPLOAD_FIELDS = [];
 
