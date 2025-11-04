@@ -39,4 +39,15 @@ return [
     'feature_deleted_successfully' => 'Feature deleted successfully',
     'show_feature' => 'Show Feature',
     'edit_feature' => 'Edit Feature',
+
+    // Messages
+    'messages' => 'Messages',
+    'no_messages' => 'No Messages',
+    'message_deleted_successfully' => 'Message deleted successfully',
+    'show_message' => 'Show Message',
+    'name' => 'Name',
+    'email' => 'Email',
+    'subject' => 'Subject',
+    'message' => 'Message',
+    'created_at' => 'Created At',
 ];

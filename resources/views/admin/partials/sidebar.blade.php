@@ -26,6 +26,7 @@
         <ul class="navbar-nav flex-fill w-100 mb-2">
             <x-sidebar-tab href="{{ route('admin.services.index') }}" icon="fe-box" name="Services"/>
             <x-sidebar-tab href="{{ route('admin.features.index') }}" icon="fe-bookmark" name="Features"/>
+            <x-sidebar-tab href="{{ route('admin.messages.index') }}" icon="fe-message-square" name="Messages"/>
         </ul>
     </nav>
 </aside>

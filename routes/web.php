@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\FeatureController;
+use App\Http\Controllers\MessageController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ServiceController;
 use Illuminate\Support\Facades\Route;
@@ -36,6 +37,14 @@ Route::name('admin.')->prefix(LaravelLocalization::setLocale().'/admin')
 
             // Admin Features
             Route::resource('features', FeatureController::class);
+
+            // Messages
+            Route::controller(MessageController::class)->group(function () {
+                Route::get('messages', 'index')->name('messages.index');
+                Route::get('messages/{message}', 'show')->name('messages.show');
+                Route::delete('messages/{message}', 'destroy')->name('messages.destroy');
+            });
+
         });
         require __DIR__.'/auth.php';
     });
