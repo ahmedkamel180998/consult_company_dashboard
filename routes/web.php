@@ -4,6 +4,7 @@ use App\Http\Controllers\FeatureController;
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\SubscriberController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -43,6 +44,12 @@ Route::name('admin.')->prefix(LaravelLocalization::setLocale().'/admin')
                 Route::get('messages', 'index')->name('messages.index');
                 Route::get('messages/{message}', 'show')->name('messages.show');
                 Route::delete('messages/{message}', 'destroy')->name('messages.destroy');
+            });
+
+            // Subscribers
+            Route::controller(SubscriberController::class)->group(function () {
+                Route::get('subscribers', 'index')->name('subscribers.index');
+                Route::delete('subscribers/{subscriber}', 'destroy')->name('subscribers.destroy');
             });
 
         });

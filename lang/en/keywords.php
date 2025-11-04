@@ -50,4 +50,9 @@ return [
     'subject' => 'Subject',
     'message' => 'Message',
     'created_at' => 'Created At',
+
+    // Subscribers
+    'subscribers' => 'Subscribers',
+    'no_subscribers' => 'No Subscribers',
+    'subscriber_deleted_successfully' => 'Subscriber deleted successfully',
 ];
