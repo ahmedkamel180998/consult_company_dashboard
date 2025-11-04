@@ -1,11 +1,15 @@
 <?php
 
-namespace {{ namespace }};
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class {{ class }} extends Model
+/**
+ * @method static paginate(mixed $config)
+ * @method static create(mixed $data)
+ */
+class Feature extends Model
 {
     use HasFactory;
 
@@ -14,7 +18,7 @@ class {{ class }} extends Model
      *
      * @var string
      */
-    protected $table = '';
+    protected $table = 'features';
 
     /**
      * The attributes that are mass assignable.
@@ -29,7 +33,7 @@ class {{ class }} extends Model
     protected const UPLOAD_PATH = 'images/';
 
     /**
-     * fields that will handle upload document
+     * fields that will handle an upload document
      */
     protected const UPLOAD_FIELDS = [];
 

@@ -12,6 +12,7 @@ return [
     'logout' => 'Logout',
     'register' => 'Register',
     'welcome' => 'Welcome',
+    'no_records_found' => 'No records found',
 
     // Services
     'services' => 'Services',
@@ -19,7 +20,6 @@ return [
     'icon' => 'Icon',
     'description' => 'Description',
     'actions' => 'Actions',
-    'no_services' => 'No Services',
     'add_new' => 'Add New',
     'add_new_service' => 'Add New Service',
     'add_service' => 'Add Service',
@@ -28,4 +28,15 @@ return [
     'deleted_successfully' => 'Service deleted successfully',
     'show_service' => 'Show Service',
     'edit_service' => 'Edit Service',
+
+    // Features
+    'features' => 'Features',
+    'no_features' => 'No Features',
+    'add_new_feature' => 'Add New Feature',
+    'add_feature' => 'Add Feature',
+    'feature_created_successfully' => 'Feature created successfully',
+    'feature_updated_successfully' => 'Feature updated successfully',
+    'feature_deleted_successfully' => 'Feature deleted successfully',
+    'show_feature' => 'Show Feature',
+    'edit_feature' => 'Edit Feature',
 ];

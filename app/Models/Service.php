@@ -30,12 +30,12 @@ class Service extends Model
     /**
      * Upload Path
      */
-    const UPLOAD_PATH = 'images/';
+    protected const UPLOAD_PATH = 'images/';
 
     /**
-     * fields that will handle upload document
+     * fields that will handle an upload document
      */
-    const UPLOAD_FIELDS = [];
+    protected const UPLOAD_FIELDS = [];
 
     ##--------------------------------- RELATIONSHIPS
 
