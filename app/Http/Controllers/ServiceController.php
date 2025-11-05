@@ -14,6 +14,7 @@ class ServiceController extends Controller
     public function index()
     {
         $services = Service::paginate(config('pagination.default'));
+
         return view('admin.services.index', get_defined_vars());
     }
 
@@ -32,6 +33,7 @@ class ServiceController extends Controller
     {
         $data = $request->validated();
         Service::create($data);
+
         return to_route('admin.services.index')->with('success', __('keywords.created_successfully'));
     }
 
@@ -58,6 +60,7 @@ class ServiceController extends Controller
     {
         $data = $request->validated();
         $service->update($data);
+
         return to_route('admin.services.index')->with('success', __('keywords.updated_successfully'));
     }
 
@@ -67,6 +70,7 @@ class ServiceController extends Controller
     public function destroy(Service $service)
     {
         $service->delete();
+
         return to_route('admin.services.index')->with('success', __('keywords.deleted_successfully'));
     }
 }

@@ -14,6 +14,7 @@ class SettingController extends Controller
     public function index(): View
     {
         $setting = Setting::findOrFail(1);
+
         return view('admin.settings.index', get_defined_vars());
     }
 
@@ -24,6 +25,7 @@ class SettingController extends Controller
     {
         $data = $request->validated();
         $setting->update($data);
+
         return to_route('admin.settings.index')->with('success', __('keywords.settings_updated_successfully'));
     }
 }

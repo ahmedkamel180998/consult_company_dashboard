@@ -12,6 +12,7 @@ class SubscriberController extends Controller
     public function index()
     {
         $subscribers = Subscriber::paginate(config('pagination.default'));
+
         return view('admin.subscribers.index', get_defined_vars());
     }
 
@@ -21,6 +22,7 @@ class SubscriberController extends Controller
     public function destroy(Subscriber $subscriber)
     {
         $subscriber->delete();
+
         return to_route('admin.subscribers.index')->with('success', __('keywords.subscriber_deleted_successfully'));
     }
 }

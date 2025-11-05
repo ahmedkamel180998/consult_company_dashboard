@@ -14,6 +14,7 @@ class FeatureController extends Controller
     public function index()
     {
         $features = Feature::paginate(config('pagination.default'));
+
         return view('admin.features.index', get_defined_vars());
     }
 
@@ -32,6 +33,7 @@ class FeatureController extends Controller
     {
         $data = $request->validated();
         Feature::create($data);
+
         return to_route('admin.features.index')->with('success', __('keywords.feature_created_successfully'));
     }
 
@@ -58,6 +60,7 @@ class FeatureController extends Controller
     {
         $data = $request->validated();
         $feature->update($data);
+
         return to_route('admin.features.index')->with('success', __('keywords.feature_updated_successfully'));
     }
 
@@ -67,6 +70,7 @@ class FeatureController extends Controller
     public function destroy(Feature $feature)
     {
         $feature->delete();
+
         return to_route('admin.features.index')->with('success', __('keywords.feature_deleted_successfully'));
     }
 }

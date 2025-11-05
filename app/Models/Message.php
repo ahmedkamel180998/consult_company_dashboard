@@ -36,15 +36,13 @@ class Message extends Model
      */
     protected const UPLOAD_FIELDS = [];
 
-    ##--------------------------------- RELATIONSHIPS
+    // #--------------------------------- RELATIONSHIPS
 
-
-    ##--------------------------------- ATTRIBUTES
+    // #--------------------------------- ATTRIBUTES
     public function getCreatedAtHumanAttribute(): string
     {
         return $this->created_at ? now()->locale('ar')->diffForHumans($this->created_at) : '';
     }
 
-
-    ##--------------------------------- CUSTOM FUNCTIONS
+    // #--------------------------------- CUSTOM FUNCTIONS
 }

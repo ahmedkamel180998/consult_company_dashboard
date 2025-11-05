@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 /**
  * @method static paginate(mixed $config)
  * @method static create(mixed $data)
+ *
  * @property mixed $image
  */
 class Testimonial extends Model
@@ -38,11 +39,9 @@ class Testimonial extends Model
      */
     protected const UPLOAD_FIELDS = [];
 
-    ##--------------------------------- RELATIONSHIPS
+    // #--------------------------------- RELATIONSHIPS
 
+    // #--------------------------------- ATTRIBUTES
 
-    ##--------------------------------- ATTRIBUTES
-
-
-    ##--------------------------------- CUSTOM FUNCTIONS
+    // #--------------------------------- CUSTOM FUNCTIONS
 }

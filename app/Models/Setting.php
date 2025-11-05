@@ -37,11 +37,9 @@ class Setting extends Model
      */
     protected const UPLOAD_FIELDS = [];
 
-    ##--------------------------------- RELATIONSHIPS
+    // #--------------------------------- RELATIONSHIPS
 
+    // #--------------------------------- ATTRIBUTES
 
-    ##--------------------------------- ATTRIBUTES
-
-
-    ##--------------------------------- CUSTOM FUNCTIONS
+    // #--------------------------------- CUSTOM FUNCTIONS
 }

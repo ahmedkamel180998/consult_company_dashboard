@@ -14,6 +14,7 @@ class MessageController extends Controller
     public function index(): View
     {
         $messages = Message::paginate(config('pagination.default'));
+
         return view('admin.messages.index', get_defined_vars());
     }
 
@@ -31,6 +32,7 @@ class MessageController extends Controller
     public function destroy(Message $message): RedirectResponse
     {
         $message->delete();
+
         return to_route('admin.messages.index')->with('success', __('keywords.message_deleted_successfully'));
     }
 }

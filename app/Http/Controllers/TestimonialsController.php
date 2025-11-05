@@ -17,6 +17,7 @@ class TestimonialsController extends Controller
     public function index(): View
     {
         $testimonials = Testimonial::paginate(config('pagination.default'));
+
         return view('admin.testimonials.index', get_defined_vars());
     }
 
@@ -45,6 +46,7 @@ class TestimonialsController extends Controller
         $data['image'] = $new_image_name;
 
         Testimonial::create($data);
+
         return to_route('admin.testimonials.index')->with('success', __('keywords.testimonial_created_successfully'));
     }
 
@@ -84,6 +86,7 @@ class TestimonialsController extends Controller
             $data['image'] = $new_image_name;
         }
         $testimonial->update($data);
+
         return to_route('admin.testimonials.index')->with('success', __('keywords.testimonial_updated_successfully'));
     }
 
@@ -94,6 +97,7 @@ class TestimonialsController extends Controller
     {
         $testimonial->delete();
         Storage::delete("public/testimonials/$testimonial->image");
+
         return to_route('admin.testimonials.index')->with('success', __('keywords.testimonial_deleted_successfully'));
     }
 }

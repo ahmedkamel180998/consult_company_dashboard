@@ -9,6 +9,7 @@ use Illuminate\View\Component;
 class ActionButton extends Component
 {
     public string $content;
+
     public string $buttonType;
 
     /**

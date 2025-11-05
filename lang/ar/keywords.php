@@ -11,5 +11,5 @@ return [
     'let_me_in' => 'تسجيل الدخول',
     'logout' => 'تسجيل الخروج',
     'register' => 'التسجيل',
-    'welcome' => 'مرحبا'
+    'welcome' => 'مرحبا',
 ];
