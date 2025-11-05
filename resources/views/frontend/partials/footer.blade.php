@@ -5,15 +5,30 @@
         <div class="row g-5">
             <div class="col-md-6 col-lg-4">
                 <h5 class="text-white mb-4">Get In Touch</h5>
-                <p><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                <p><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                <p><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                <p><i class="fa fa-map-marker-alt me-3"></i>{{ $setting->address }}</p>
+                <p><i class="fa fa-phone-alt me-3"></i>{{ $setting->phone }}</p>
+                <p><i class="fa fa-envelope me-3"></i>{{ $setting->email }}</p>
                 <div class="d-flex pt-2">
-                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-instagram"></i></a>
-                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                    @if($setting->twitter)
+                        <a class="btn btn-outline-light btn-social" target="_blank" href="{{ $setting->twitter }}"><i
+                                    class="fab fa-twitter"></i></a>
+                    @endif
+                    @if($setting->facebook)
+                        <a class="btn btn-outline-light btn-social" target="_blank" href="{{ $setting->facebook }}"><i
+                                    class="fab fa-facebook-f"></i></a>
+                    @endif
+                    @if($setting->youtube)
+                        <a class="btn btn-outline-light btn-social" target="_blank" href="{{ $setting->youtube }}"><i
+                                    class="fab fa-youtube"></i></a>
+                    @endif
+                    @if($setting->instagram)
+                        <a class="btn btn-outline-light btn-social" target="_blank" href="{{ $setting->instagram }}"><i
+                                    class="fab fa-instagram"></i></a>
+                    @endif
+                    @if($setting->linkedin)
+                        <a class="btn btn-outline-light btn-social" target="_blank" href="{{ $setting->linkedin }}"><i
+                                    class="fab fa-linkedin-in"></i></a>
+                    @endif
                 </div>
             </div>
             <div class="col-md-6 col-lg-4">

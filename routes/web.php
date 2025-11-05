@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\FeatureController;
+use App\Http\Controllers\FrontController;
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ServiceController;
@@ -20,11 +21,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 // Frontend Routes
-Route::name('frontend.')->group(function () {
-    Route::view('/', 'frontend.index')->name('index');
-    Route::view('/about', 'frontend.about')->name('about');
-    Route::view('/services', 'frontend.services')->name('services');
-    Route::view('/contact', 'frontend.contact')->name('contact');
+Route::controller(FrontController::class)->name('frontend.')->group(function () {
+    Route::get('/', 'index')->name('index');
+    Route::get('/about', 'about')->name('about');
+    Route::get('/services', 'services')->name('services');
+    Route::get('/contact', 'contact')->name('contact');
+    Route::post('/subscribe', 'subscribe')->name('subscribe');
+    Route::post('/contact', 'storeContact')->name('contact.store');
 });
 
 // Admin Routes
